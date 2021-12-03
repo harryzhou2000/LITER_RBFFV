@@ -1,0 +1,71 @@
+Abstract:
+The large reconstruction stencil has been the major bottleneck problem in developing high 
+order finite volume schemes on unstructured grids. This paper presents a compact 
+reconstruction procedure for arbitrarily high order finite volume method on unstructured grids
+to overcome this shortcoming. In this procedure, a set of constitutive relations are constructed 
+by requiring the reconstruction polynomial and its derivatives on the control volume of 
+interest to conserve their averages on face-neighboring cells. These relations result in an 
+over-determined linear equation system, which, in the sense of least-squares, can be reduced 
+to a block-tridiagonal system in the one-dimensional case. The one-dimensional formulations 
+of the reconstruction are discussed in detail and a Fourier analysis is presented to study the 
+dispersion/dissipation and stability properties. The WBAP limiter based on the secondary 
+reconstruction is used to suppress the non-physical oscillations near discontinuities while 
+achieve high order accuracy in smooth regions of the solution. Numerical results demonstrate
+the method’s high order accuracy, robustness and shock capturing capability.
+Keywords: Compact reconstruction, High order, Finite volume method, Shock capturing.
+1 Introduction
+High order numerical methods on unstructured grids are one of the active research areas in 
+computational fluid dynamics (CFD). Such methods are believed to have the advantages of 
+high order accuracy, low dissipation/dispersion, and capability of handling both complex 
+physics and geometries. Therefore, in applications such as direct numerical simulation (DNS) 
+and large eddy simulation (LES) of turbulent flows and computational aeroacoustics (CAA), 
+high order methods have significant potential to achieve higher efficiency in terms of number 
+of elements required to accurately resolve important flow features than typical second order 
+schemes [1]. High order methods on unstructured grids are widely considered as the next 
+major breakthrough in CFD. Over the last two decades, various high order methods have been 
+developed, such as the high order k-exact [2-5]/ WENO [6-9] finite volume (FV) schemes, 
+discontinuous Galerkin (DG) method [10-14], PNPM procedure [15-17], Residual Distribution 
+(RD) method [18-21], spectral volume (SV) [22-25]/ spectral difference (SD) [26-28] 
+methods and correction procedure via reconstruction (CPR) method [29, 30].
+The motivation of the present paper is to design a FV scheme that overcomes some 
+important drawbacks associated with the high order FV schemes. The high order FV schemes 
+are briefly reviewed before presenting the basic ideas of the present method. The key 
+ingredient of the FV methods to achieve high order accuracy is the high order representation 
+of physical data inside the cell. One of the pioneering works in this area is the FV scheme 
+based on the k-exact reconstruction, which was first proposed by Barth and Fredrichson [2] on 
+2D grids and later generalized to 3D grids by Delanaye and Liu [3]. Further development of 
+this scheme was made by Ollivier-Gooch [4, 5] and others. The ENO and WENO schemes
+were firstly developed on structured grids [31-39]. The ENO scheme on unstructured grids 
+was developed by Abgrall [40] and the WENO scheme on unstructured grids was developed 
+by Friedrich [6]. These schemes were further studied by Dumbser [7, 8] and Shu [9] to 
+improve their efficiency and accuracy. Li and Ren [41] proposed an improved WENO scheme 
+on unstructured grids using the secondary reconstruction (SR). The basic idea of the SR is to 
+use the continuations of the k-exact reconstructions on neighboring cells as the additional 
+candidate reconstructions for the current cell. The polynomials of the SRs are derived 
+analytically and are very simple, which makes the improved WENO scheme being much 
+more efficient than the traditional WENO schemes.
+The number of cells in the stencil of a high order FV scheme is usually large because the 
+reconstruction in FV methods uses only the cell averages on the corresponding stencil. 
+Furthermore, the reconstruction procedure for the high order FV schemes could be singular 
+especially on unstructured grids. To overcome this problem, the reconstruction is sometimes 
+performed in the least-squares sense, for which even larger stencil is needed. The large stencil 
+results in a series of problems [21, 42]. The first one is cache missing due to the data in the 
+stencil being far away in memory. The second one is that large amount of data need to be 
+transferred at the interface of two partitions in parallel computing, which leads to the 
+deterioration of the parallel efficiency. The third one is that on a larger stencil, more memory 
+is needed to store the coefficients associated with the cells in the stencil. Therefore, very large 
+stencil has been one of the most serious problems for the high order FV schemes. In fact, one 
+of the important motivations to develop the high order schemes with internal degree of 
+freedom (DOF) such as the DG and SV/SD schemes is to reduce the size of the stencil so that 
+the stencil is compact and independent of the order of accuracy.
+This paper presents a compact least-squares (CLS) reconstruction procedure for high order 
+FV method. The key novelty of this procedure is that it can achieve arbitrarily high order 
+accuracy using a compact stencil consisting of only the face-neighboring cells. To explain the 
+basic idea of this reconstruction, we note that the polynomial of a traditional reconstruction 
+procedure is determined by conserving the cell averages of the solution on the current cell as 
+well as on the neighboring cells belonging to the stencil of the reconstruction for sufficiently 
+smooth solution. Since the number of unknowns in the reconstruction polynomial increases 
+very fast with the degree of the polynomial, a very large stencil is required for high order 
+polynomial reconstruction. To cure this shortcoming and maintain the compact stencil for 
+arbitrarily high order reconstruction, the present reconstruction procedure requires not only 
+the dependent variables but also its various orders of derivatives to conserve their means on
