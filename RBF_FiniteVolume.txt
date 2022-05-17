@@ -1,0 +1,372 @@
+﻿@article{RN35,
+   author = {Aboiyar, Terhemen and Georgoulis, Emmanuil H and Iske, Armin},
+   title = {High order WENO finite volume schemes using polyharmonic spline reconstruction},
+   year = {2006},
+   type = {Journal Article}
+}
+
+@article{RN36,
+   author = {Aboiyar, Terhemen and Georgoulis, Emmanuil H and Iske, Armin},
+   title = {Adaptive ADER methods using kernel-based polyharmonic spline WENO reconstruction},
+   journal = {SIAM Journal on Scientific Computing},
+   volume = {32},
+   number = {6},
+   pages = {3251-3277},
+   ISSN = {1064-8275},
+   year = {2010},
+   type = {Journal Article}
+}
+
+@article{RN16,
+   author = {Aboiyar, Terhemen and Shior, Mary-Anne Msuur and Ali, Danasabe Tama},
+   title = {A radial basis function WENO method with stencil adaptivity},
+   journal = {Eng. Math. Lett.},
+   volume = {2016},
+   pages = {Article ID 6},
+   ISSN = {2049-9337},
+   year = {2016},
+   type = {Journal Article}
+}
+
+@article{RN17,
+   author = {Aràndiga, Francesc and Donat, Rosa and Romani, Lucia and Rossini, Milvia},
+   title = {On the reconstruction of discontinuous functions using multiquadric RBF–WENO local interpolation techniques},
+   journal = {Mathematics and Computers in Simulation},
+   volume = {176},
+   pages = {4-24},
+   ISSN = {0378-4754},
+   year = {2020},
+   type = {Journal Article}
+}
+
+@article{RN19,
+   author = {Arbogasta, T and Huangb, CS and Kuob, MH},
+   title = {RBF WENO Reconstructions with Adaptive Order and Applications to Conservation Laws⋆},
+   type = {Journal Article}
+}
+
+@inproceedings{RN28,
+   author = {Barth, Timothy and Frederickson, Paul},
+   title = {Higher order solution of the Euler equations on unstructured grids using quadratic reconstruction},
+   booktitle = {28th aerospace sciences meeting},
+   pages = {13},
+   type = {Conference Proceedings}
+}
+
+@article{RN13,
+   author = {Bigoni, Caterina and Hesthaven, Jan S},
+   title = {Adaptive WENO methods based on radial basis function reconstruction},
+   journal = {Journal of Scientific Computing},
+   volume = {72},
+   number = {3},
+   pages = {986-1020},
+   ISSN = {1573-7691},
+   year = {2017},
+   type = {Journal Article}
+}
+
+@inbook{RN6,
+   author = {Bonaventura, Luca and Miglio, Edie and Saleri, F},
+   title = {Finite Volume Solvers for the Shallow Water Equations Using Matrix Radial Basis Function Reconstruction},
+   booktitle = {Numerical Mathematics and Advanced Applications},
+   publisher = {Springer},
+   pages = {207-214},
+   year = {2006},
+   type = {Book Section}
+}
+
+@article{RN1,
+   author = {de Boer, A. and van der Schoot, M. S. and Bijl, H.},
+   title = {Mesh deformation based on radial basis function interpolation},
+   journal = {Computers & Structures},
+   volume = {85},
+   number = {11},
+   pages = {784-795},
+   ISSN = {0045-7949},
+   DOI = {https://doi.org/10.1016/j.compstruc.2007.01.013},
+   url = {https://www.sciencedirect.com/science/article/pii/S0045794907000223
+https://www.sciencedirect.com/science/article/abs/pii/S0045794907000223?via%3Dihub},
+   year = {2007},
+   type = {Journal Article}
+}
+
+@article{RN10,
+   author = {Divo, Eduardo and Kassab, Alain J},
+   title = {An efficient localized radial basis function meshless method for fluid flow and conjugate heat transfer},
+   ISSN = {0022-1481},
+   year = {2007},
+   type = {Journal Article}
+}
+
+@article{RN22,
+   author = {Fornberg, Bengt and Lehto, Erik},
+   title = {Stabilization of RBF-generated finite difference methods for convective PDEs},
+   journal = {Journal of Computational Physics},
+   volume = {230},
+   number = {6},
+   pages = {2270-2285},
+   ISSN = {0021-9991},
+   year = {2011},
+   type = {Journal Article}
+}
+
+@article{RN23,
+   author = {Golberg, MA and Chen, CS and Karur, SR},
+   title = {Improved multiquadric approximation for partial differential equations},
+   journal = {Engineering Analysis with boundary elements},
+   volume = {18},
+   number = {1},
+   pages = {9-17},
+   ISSN = {0955-7997},
+   year = {1996},
+   type = {Journal Article}
+}
+
+@article{RN14,
+   author = {Guo, Jingyang and Jung, Jae-Hun},
+   title = {Radial basis function ENO and WENO finite difference methods based on the optimization of shape parameters},
+   journal = {Journal of Scientific Computing},
+   volume = {70},
+   number = {2},
+   pages = {551-575},
+   ISSN = {1573-7691},
+   year = {2017},
+   type = {Journal Article}
+}
+
+@article{RN18,
+   author = {Guo, Jingyang and Jung, Jae-Hun},
+   title = {A RBF-WENO finite volume method for hyperbolic conservation laws with the monotone polynomial interpolation method},
+   journal = {Applied Numerical Mathematics},
+   volume = {112},
+   pages = {27-50},
+   ISSN = {0168-9274},
+   year = {2017},
+   type = {Journal Article}
+}
+
+@article{RN29,
+   author = {Huang, Qian-Min and Ren, Yu-Xin and Wang, Qian},
+   title = {High Order Finite Volume Schemes for Solving the Non-Conservative Convection Equations on the Unstructured Grids},
+   journal = {Journal of Scientific Computing},
+   volume = {88},
+   number = {2},
+   pages = {1-34},
+   ISSN = {1573-7691},
+   year = {2021},
+   type = {Journal Article}
+}
+
+@article{RN25,
+   author = {Kansa, Edward J},
+   title = {Multiquadrics—A scattered data approximation scheme with applications to computational fluid-dynamics—I surface approximations and partial derivative estimates},
+   journal = {Computers & Mathematics with applications},
+   volume = {19},
+   number = {8-9},
+   pages = {127-145},
+   ISSN = {0898-1221},
+   year = {1990},
+   type = {Journal Article}
+}
+
+@article{RN3,
+   author = {Liu, YY and Yang, LM and Shu, C and Zhang, HW},
+   title = {Efficient high-order radial basis-function-based differential quadrature–finite volume method for incompressible flows on unstructured grids},
+   journal = {Physical Review E},
+   volume = {104},
+   number = {4},
+   pages = {045312},
+   year = {2021},
+   type = {Journal Article}
+}
+
+@article{RN37,
+   author = {Liu, Yilang and Zhang, Weiwei and Jiang, Yuewen and Ye, Zhengyin},
+   title = {A high-order finite volume method on unstructured grids using RBF reconstruction},
+   journal = {Computers & Mathematics with Applications},
+   volume = {72},
+   number = {4},
+   pages = {1096-1117},
+   ISSN = {0898-1221},
+   year = {2016},
+   type = {Journal Article}
+}
+
+@phdthesis{RN7,
+   author = {Moroney, Timothy John},
+   title = {An investigation of a finite volume method incorporating radial basis functions for simulating nonlinear transport},
+   university = {Queensland University of Technology},
+   year = {2006},
+   type = {Thesis}
+}
+
+@article{RN4,
+   author = {Moroney, Timothy J and Turner, Ian W},
+   title = {A finite volume method based on radial basis functions for two-dimensional nonlinear diffusion equations},
+   journal = {Applied mathematical modelling},
+   volume = {30},
+   number = {10},
+   pages = {1118-1133},
+   ISSN = {0307-904X},
+   year = {2006},
+   type = {Journal Article}
+}
+
+@article{RN2,
+   author = {Moroney, Timothy J and Turner, Ian W},
+   title = {A three-dimensional finite volume method based on radial basis functions for the accurate computational modelling of nonlinear diffusion equations},
+   journal = {Journal of Computational Physics},
+   volume = {225},
+   number = {2},
+   pages = {1409-1426},
+   ISSN = {0021-9991},
+   year = {2007},
+   type = {Journal Article}
+}
+
+@article{RN12,
+   author = {Sanyasiraju, YVSS and Chandhini, G},
+   title = {Local radial basis function based gridfree scheme for unsteady incompressible viscous flows},
+   journal = {Journal of Computational Physics},
+   volume = {227},
+   number = {20},
+   pages = {8922-8948},
+   ISSN = {0021-9991},
+   year = {2008},
+   type = {Journal Article}
+}
+
+@article{RN8,
+   author = {Šarler, Božidar},
+   title = {A radial basis function collocation approach in computational fluid dynamics},
+   journal = {Computer Modelling in Engineering & Sciences},
+   volume = {7},
+   pages = {185-193},
+   year = {2005},
+   type = {Journal Article}
+}
+
+@article{RN9,
+   author = {Šarler, Božidar and Perko, Janez and Chen, Ching‐Shyang},
+   title = {Radial basis function collocation method solution of natural convection in porous media},
+   journal = {International Journal of Numerical Methods for Heat & Fluid Flow},
+   ISSN = {0961-5539},
+   year = {2004},
+   type = {Journal Article}
+}
+
+@article{RN11,
+   author = {Sarra, Scott A},
+   title = {A local radial basis function method for advection–diffusion–reaction equations on complexly shaped domains},
+   journal = {Applied mathematics and Computation},
+   volume = {218},
+   number = {19},
+   pages = {9853-9865},
+   ISSN = {0096-3003},
+   year = {2012},
+   type = {Journal Article}
+}
+
+@article{RN5,
+   author = {Sarra, Scott A and Kansa, Edward J},
+   title = {Multiquadric radial basis function approximation methods for the numerical solution of partial differential equations},
+   journal = {Advances in Computational Mechanics},
+   volume = {2},
+   number = {2},
+   pages = {220},
+   year = {2009},
+   type = {Journal Article}
+}
+
+@article{RN20,
+   author = {Shankar, Varun and Wright, Grady B and Kirby, Robert M and Fogelson, Aaron L},
+   title = {A radial basis function (RBF)-finite difference (FD) method for diffusion and reaction–diffusion equations on surfaces},
+   journal = {Journal of scientific computing},
+   volume = {63},
+   number = {3},
+   pages = {745-768},
+   ISSN = {1573-7691},
+   year = {2015},
+   type = {Journal Article}
+}
+
+@article{RN30,
+   author = {Shu, Chi-Wang},
+   title = {High-order finite difference and finite volume WENO schemes and discontinuous Galerkin methods for CFD},
+   journal = {International Journal of Computational Fluid Dynamics},
+   volume = {17},
+   number = {2},
+   pages = {107-118},
+   ISSN = {1061-8562},
+   year = {2003},
+   type = {Journal Article}
+}
+
+@article{RN26,
+   author = {Tolstykh, AI and Shirobokov, DA},
+   title = {On using radial basis functions in a “finite difference mode” with applications to elasticity problems},
+   journal = {Computational Mechanics},
+   volume = {33},
+   number = {1},
+   pages = {68-79},
+   ISSN = {1432-0924},
+   year = {2003},
+   type = {Journal Article}
+}
+
+@article{RN15,
+   author = {Wang, BS and Don, Wai-Sun and Gao, Z and Wang, YH and Wen, X},
+   title = {Hybrid compact-WENO finite difference scheme with radial basis function based shock detection method for hyperbolic conservation laws},
+   journal = {SIAM Journal on Scientific Computing},
+   volume = {40},
+   number = {6},
+   pages = {A3699-A3714},
+   ISSN = {1064-8275},
+   year = {2018},
+   type = {Journal Article}
+}
+
+@article{RN31,
+   author = {Wang, Qian and Ren, Yu-Xin and Li, Wanai},
+   title = {Compact high order finite volume method on unstructured grids I: Basic formulations and one-dimensional schemes},
+   journal = {Journal of Computational Physics},
+   volume = {314},
+   pages = {863-882},
+   ISSN = {0021-9991},
+   year = {2016},
+   type = {Journal Article}
+}
+
+@article{RN32,
+   author = {Wang, Qian and Ren, Yu-Xin and Li, Wanai},
+   title = {Compact high order finite volume method on unstructured grids II: Extension to two-dimensional Euler equations},
+   journal = {Journal of Computational Physics},
+   volume = {314},
+   pages = {883-908},
+   ISSN = {0021-9991},
+   year = {2016},
+   type = {Journal Article}
+}
+
+@article{RN33,
+   author = {Wang, Qian and Ren, Yu-Xin and Pan, Jianhua and Li, Wanai},
+   title = {Compact high order finite volume method on unstructured grids III: Variational reconstruction},
+   journal = {Journal of Computational physics},
+   volume = {337},
+   pages = {1-26},
+   ISSN = {0021-9991},
+   year = {2017},
+   type = {Journal Article}
+}
+
+@article{RN34,
+   author = {Zhang, Yu-Si and Ren, Yu-Xin and Wang, Qian},
+   title = {Compact high order finite volume method on unstructured grids IV: Explicit multi-step reconstruction schemes on compact stencil},
+   journal = {Journal of Computational Physics},
+   volume = {396},
+   pages = {161-192},
+   ISSN = {0021-9991},
+   year = {2019},
+   type = {Journal Article}
+}
+

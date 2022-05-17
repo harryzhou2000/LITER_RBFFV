@@ -31,9 +31,9 @@ Apart from mesh free methods, RBFs can also improve meshed methods including FV.
 
 In a series of research [[17, 18, 19]](#ref17), RBF is combined with a nodal form of FV, the control-volume finite element (CV-FE), to improve accuracy. The original CV-FE reconstructs polynomials on the simple volumes, such as tetrahedra, while FV control volumes are established surrounding each tetrahedra node. In [[17]](#ref17), the original field reconstructed with shape functions is overlapped with additional RBF approximation using node values other than in the origin stencil. As the RBF-augmented reconstruction necessarily involves a larger stencil and more nodal values, it gains much higher accuracy. The RBF-augmented CV-FE is able to be 3rd-order accurate in 3-D problems and 5th in 2-D, compared to the original 2nd-order. This method was tested on diffusion-dominated problems, and its effectiveness is unknown in advection-dominated region.
 
-Another approach to utilize RBFs in high order FV is to simply change the polynomials into RBFs, as is in [[20]](#ref20), where a fully RBF-WENO finite volume method was proposed. The RBF-WENO in [[20]](#ref20) replaces all the polynomials with RBFs in each candidate stencil, constructing appropriate linear weight expression and smoothness indicators. The results of this RBF-WENO indicate the choice of shape parameter and RBF type is essential to accuracy and stability, and proper settings could lead to similar or higher accuracy compared with regular polynomial WENO FV. A similar approach is also taken in [[21]](#ref21), where polynomials in WENO stencils are totally replaced with RBFs. Analysis in [[21]](#ref21) pointed out RBF-WENO is only applied in smooth regions and replaced with regular ENO with the help of discontinuity detector. Both RBF-WENO schemes in [[20]](#ref20) and [[21]](#ref21) were tested in 1-D discontinuous problems including Euler equation. In [[22]](#ref22), the multiquadric RBF is expanded into Taylor series, and an RBF-WENO that does not revert to classical WENO is derived.
+Another approach to utilize RBFs in high order FV is to simply change the polynomials into RBFs. Early work on this appeared in [[25]](#ref25), where RBFs take place of polynomials and form an associated Sobolev space on the stencil. In [25], the RBF interpolating procedure is proved to minimize a semi-norm of the reconstructed function in the associated Sobolev space, and polyharmonic spline RBFs are adopted for they minimize a Laplacian form of functional similar with thin-plate energy. Also, the smooth indicator for WENO derived in [25] is based on the energy defined with the semi-norm. The methods in [25] have been tested on linear convection problem, and combined with adaptive mesh in [[26]](#ref26), tested on discontinuous solutions such as Burgers' equation. Following the work in [[25]](#ref25), in [[20]](#ref20), a fully RBF-WENO finite volume method was proposed. The RBF-WENO in [[20]](#ref20) replaces all the polynomials with RBFs in each candidate stencil, constructing appropriate linear weight expression and smoothness indicators. The results of this RBF-WENO indicate the choice of shape parameter and RBF type is essential to accuracy and stability, and proper settings could lead to similar or higher accuracy compared with regular polynomial WENO FV. A similar approach is also taken in [[21]](#ref21), where polynomials in WENO stencils are totally replaced with RBFs. Analysis in [[21]](#ref21) pointed out RBF-WENO is only applied in smooth regions and replaced with regular ENO with the help of discontinuity detector. Both RBF-WENO schemes in [[20]](#ref20) and [[21]](#ref21) were tested in 1-D discontinuous problems including Euler equation. In [[22]](#ref22), the multiquadric RBF is expanded into Taylor series, and an RBF-WENO that does not revert to classical WENO is derived. RBF reconstruction replacing k-exact has also been used to solve viscous flows in [[24]](#ref24). The interpolating methods replacing k-exact mentioned above share similar major properties, where each element in the stencil correspond to one RBF base function. Some differences should be noted. First, interpolating conducted by [[20,25,26]](#ref20) use an RBF with its reference point averaged on each element (control volume) in the stencil, instead of using a specific reference point in that element, while in other works reference points are simply chosen as centroids of each volume. Second, in methods such as [[25]](#ref25), the interpolating also include extra polynomial parts, introducing constraints to make the RBF part actually interpolate the non-polynomial part of the distribution. Third, while [[25]](#ref25) adopts the polyharmonic spline RBFs, most other methods use multiquadric RBF.
 
-While the RBF related FV methods above are using RBFs as part of or all of the reconstruction basis, one can also adopt a pure polynomial basis while using RBFs to derive the high order coefficients, as is in [[23]](#ref23) . When the polynomial reconstruction is viewed as a taylor expansion, the coefficients of polynomial basis correspond to approximate partial derivatives of the solution. Using a smooth enough RBF and enough stencil points, one can approximate any high order derivative with RBF interpolation. The results indicate that this method is able to out perform common k-exact reconstruction on 2-D unstructured grids.
+While the RBF related FV methods above are using RBFs as part of or all of the reconstruction basis, one can also adopt a pure polynomial basis while using RBFs to derive the high order coefficients, as is in [[23]](#ref23) . When the polynomial reconstruction is viewed as a taylor expansion, the coefficients of polynomial basis correspond to approximate partial derivatives of the solution. Using a smooth enough RBF and enough stencil points, one can approximate any high order derivative with RBF interpolation. The results indicate that this method is able to outperform common k-exact reconstruction on 2-D unstructured grids.
 
 ### 1.4. Solving Non-Conservative Equations with High Order FV
 
@@ -120,12 +120,26 @@ While the RBF related FV methods above are using RBFs as part of or all of the r
 	
 <span id="ref21"></span>
 [21] Guo, J. and J.-H. Jung (2017). "A RBF-WENO finite volume method for hyperbolic conservation laws with the monotone polynomial interpolation method." Applied Numerical Mathematics 112: 27-50.
-	
+
 <span id="ref22"></span>
 [22] Aràndiga, F., et al. (2020). "On the reconstruction of discontinuous functions using multiquadric RBF–WENO local interpolation techniques." Mathematics and Computers in Simulation 176: 4-24.
 
 <span id="ref23"></span>	
 [23] Liu, Y., et al. (2021). "Efficient high-order radial basis-function-based differential quadrature–finite volume method for incompressible flows on unstructured grids." Physical Review E 104(4): 045312.
+
+<span id="ref24"></span>
+[24] Liu, Y., et al. (2016). "A high-order finite volume method on unstructured grids using RBF reconstruction." Computers & mathematics with applications 72(4): 1096-1117.
+
+<span id="ref25"></span>
+[25] Aboiyar, T., et al. (2006). "High order WENO finite volume schemes using polyharmonic spline reconstruction."
+
+<span id="ref26"></span>
+[26] Aboiyar, T., et al. (2010). "Adaptive ADER methods using kernel-based polyharmonic spline WENO reconstruction." SIAM Journal on Scientific Computing 32(6): 3251-3277.
+	
+
+	
+
+
 	
 
 
